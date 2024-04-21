@@ -43,7 +43,7 @@ resource "aws_iam_role_policy" "create_ebs_volume_iam_role_policy_lambda" {
 
 data "archive_file" "zip_the_python_code" {
   type        = "zip"
-  source_file = "${path.module}/App/ebssnopshot.py"
+  source_file = "${path.module}/App/ebssnapshot.py"
   output_path = "${path.module}/App/ebssnapshot.zip"
 }
 resource "aws_lambda_function" "cron_lambda_2" {

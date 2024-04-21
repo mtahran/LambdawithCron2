@@ -1,11 +1,11 @@
-# Terraform AWS Lambda Function to create EBS SnopShots with EventBridge Trigger
+# Terraform AWS Lambda Function to create EBS SnapShots with EventBridge Trigger
 
 This Terraform repository contains configurations to deploy an AWS Lambda function triggered by a cron job (EventBridge rule) that runs every 5 minutes. The Lambda function is implemented using a Python script stored in the `app` folder.
 ## Folder Structure
 .
 1. ├── App
-1. │   ├── ebssnopshot.py
-1. │   └── ebssnopshot.zip
+1. │   ├── ebssnapshot.py
+1. │   └── ebssnapshot.zip
 1. ├── LICENSE
 1. ├── README.md
 1. ├── backend.tf
