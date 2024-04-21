@@ -3,18 +3,18 @@
 This Terraform repository contains configurations to deploy an AWS Lambda function triggered by a cron job (EventBridge rule) that runs every 5 minutes. The Lambda function is implemented using a Python script stored in the `app` folder.
 ## Folder Structure
 .
-1.├── App
-1.│   ├── ebssnopshot.py
-1.│   └── ebssnopshot.zip
-1.├── LICENSE
-1.├── README.md
-1.├── backend.tf
-1.├── dev.tfvars
-1.├── locals.tf
-1.├── main.tf
-1.├── outputs.tf
-1.├── providers.tf
-1.└── variables.tf
+1. ├── App
+1. │   ├── ebssnopshot.py
+1. │   └── ebssnopshot.zip
+1. ├── LICENSE
+1. ├── README.md
+1. ├── backend.tf
+1. ├── dev.tfvars
+1. ├── locals.tf
+1. ├── main.tf
+1. ├── outputs.tf
+1. ├── providers.tf
+1. └── variables.tf
 
 ## Files Included
 
