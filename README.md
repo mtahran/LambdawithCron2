@@ -56,7 +56,7 @@ Before running Terraform commands, ensure you have:
 1. Clone this repository to your local machine:
    ```bash
    git clone https://github.com/mtahran/LambdawithCron2.git
-   cd LambdawithCron
+   cd LambdawithCron2
    ```
 
 2. Update the `dev.tfvars` file with any required variables.
