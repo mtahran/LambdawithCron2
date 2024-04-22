@@ -41,18 +41,19 @@ resource "aws_iam_role_policy" "create_ebs_volume_iam_role_policy_lambda" {
   policy = data.aws_iam_policy_document.create_ebs_volume_snapshot.json
 }
 
-data "archive_file" "zip_the_python_code" {
-  type        = "zip"
-  source_file = "${path.module}/App/ebssnapshot.py"
-  output_path = "${path.module}/App/ebssnapshot.zip"
-}
+# data "archive_file" "zip_the_python_code" {
+#   type        = "zip"
+#   source_file = "${path.module}/App/ebssnapshot.py"
+#   output_path = "${path.module}/App/ebssnapshot.zip"
+# }
+
 resource "aws_lambda_function" "cron_lambda_2" {
   function_name = "cron_lambda_2"
-  filename      = "${path.module}/App/ebssnapshot.zip"
+  # filename      = "${path.module}/App/ebssnapshot.zip"
   role          = aws_iam_role.iam_for_lambda.arn
   handler       = "ebssnopshot.lambda_handler"
-  # s3_bucket     = var.s3_bucket
-  # s3_key        = var.s3_key
+  s3_bucket     = var.s3_bucket
+  s3_key        = var.s3_key
   runtime = "python3.10"
 
   tags = merge({
